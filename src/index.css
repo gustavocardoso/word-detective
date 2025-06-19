@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Detective theme animations */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Win/Lose screen animations */
+.blink-green {
+  animation: blinkGreen 3s infinite;
+}
+
+.blink-red {
+  animation: blinkRed 2s infinite;
+}
+
+@keyframes blinkGreen {
+  0%, 100% {
+    background-color: #dcfce7;
+  }
+  50% {
+    background-color: #bbf7d0;
+  }
+}
+
+@keyframes blinkRed {
+  0%, 100% {
+    background-color: #fee2e2;
+  }
+  50% {
+    background-color: #fecaca;
+  }
+}
+
+/* Progress bar animations */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes progress-grow {
+  0% {
+    transform: scaleY(0.8);
+  }
+  50% {
+    transform: scaleY(1.05);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.progress-animate {
+  animation: progress-pulse 2s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+.progress-grow {
+  animation: progress-grow 0.4s ease-out forwards;
+  transform-origin: center;
+}
